@@ -1,0 +1,34 @@
+<style>
+    .conteudo{
+        margin-top: 50px;
+    }
+</style>
+<div class="container-fluid">
+    <form>
+        <div class="conteudo col-lg-6">
+            <div class="form-group">
+                <label for="txtPerg">Pergunta: </label>
+                <input type="text" class="form-control" id="txtPerg" ng-model="vm.Pergunta.pergDescr">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" type="submit" id="btnSalvar" ng-click="vm.savePergunta()">Salvar</button>
+                <button class="btn btn-danger" type="button" id="btnCancelar">Cancelar</button>
+            </div>
+        </div>
+        <div class="conteudo col-lg-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Descrição</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </form>
+    <script>
+        $("#btnCancelar").click(function(){
+            $("#txtPerg").val('');
+        })
+    </script>
+</div>
